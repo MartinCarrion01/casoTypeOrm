@@ -15,7 +15,7 @@ export class CasoInstancia {
   @Column()
   observaciones: String;
 
-  @ManyToOne(() => Caso)
+  @ManyToOne(() => Caso, { cascade: true })
   @JoinColumn({ name: "numeroCaso" })
   caso: Caso;
 }
